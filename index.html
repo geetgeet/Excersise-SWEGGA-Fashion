@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Order</title>
+    <link href="main.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <script>
+  function calc() {
+      let female_price=(document.getElementById("f_quantity").value*150.95);
+      document.getElementById("f_priceget").innerHTML=female_price.toFixed(2);
+      let male_price=(document.getElementById("m_quantity").value*180.95);
+      document.getElementById("m_priceget").innerHTML=male_price.toFixed(2);
+      let price= (document.getElementById("f_quantity").value * 150.95 +
+        document.getElementById("m_quantity").value * 180.95);
+        document.getElementById("total_price").innerHTML= price.toFixed(2);
+    } 
+  </script>
+
+
+  <body>
+    <div id="page">
+      <div id="main">
+        <img id="sidebar" src="swegga.jpg" />
+        <img src="delivery.gif" id="banner" />
+        <img src="links.gif" id="navigation" usemap="#mapping" >
+<map name="mapping">
+  <area shape="rect" coords="10,5,95,35"  alt="home" href="index.html">
+  <area shape="rect" coords="105,5,190,35" alt="services" href="services.html">
+  <area shape="rect" coords="205,5,300,35" alt="products" href="products.html">
+  <area shape="rect" coords="310,5,440,35" alt="orderstatus" href="orderstatus.html">
+  <area shape="rect" coords="450,5,555,35" alt="contactUs" href="contactus.html">     
+</map>
+        <!--<a href="#Home.html">Home</a>
+        <a href="#order.html">Order</a>
+        <a href="#services.html">Services</a>
+        <a href="#products.html">Products</a>
+        <a href="#orderStatus.html">Status</a>
+        <a href="#contactUs.html">Contact Us</a>-->
+<form>
+        <table>
+          <caption class="caption">Product Summary</caption>
+        <tr>
+          <th>Description</th>
+          <th>Size</th>
+          <th>Colour</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td><a href="#Female ski.html"><u>Female ski jackets</u></td></a>
+          <td>
+            <label for="sizes">Size:</label>
+            <select name="Size" id="size_mnu">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="Large">Large</option>
+              <option value="x-large">X-Large</option>
+            </select>
+          </td>
+          <td>
+            <label for="Colours">Colour:</label>
+            <select name="Colours" id="colour_mnu">
+              <option value="red">Red</option>
+              <option value="white">White</option>
+              <option value="Black">Black</option>
+              <option value="blue">Blue</option>
+            </select>
+          </td>
+          <td><label>[R 150.95]</label></td>
+          <td>
+            <input id="f_quantity" type="number" />
+            <form action="calc_price"></form>
+          </td>
+          <td><label id="f_priceget">[fprice.get]</label></td>
+        </tr>
+
+
+
+        <tr>
+          <td><a href="#Male ski jackets"><u>Male ski jackets</u></td></a>
+          <td>
+            <label for="m_sizes">Size:</label>
+
+            <select name="Size" id="size_mnu">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="Large">Large</option>
+              <option value="x-large">X-Large</option>
+            </select>
+          </td>
+          <td>
+            <label for="Colours">Colour:</label>
+
+            <select name="Colours" id="colour_mnu">
+              <option value="red">Red</option>
+              <option value="white">White</option>
+              <option value="Black">Black</option>
+              <option value="blue">Blue</option>
+            </select>
+            <td><label id="price" value="180.95">[R 180.95]</label></td>
+          </td>
+          <td>
+            <input id="m_quantity" type="number" />
+            
+          </td>
+          <td><label id="m_priceget">[mprice.get]</label></td>
+        <tr><td colspan="4">Click to confirm and process your order</td>
+        <td><button class="b_calc_price" onclick=calc()>Total Price</button></td>
+      <td><label id="total_price" >[Total price]</label></td></tr>
+        </tr>
+      </table>
+    </form>
+        <footer><hr width=100%>
+        <p class="copyright">@ 2014 Swegga Fashion - Examination number</p>
+      </footer>
+      </div>
+    </div>
+  
+  </body>
+</html>
+
